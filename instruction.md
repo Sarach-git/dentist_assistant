@@ -62,3 +62,11 @@ https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/tree/main
 ```
 
 then create a jupyter notebook for test our functions
+
+
+-----
+**Experiment**
+
+
+
+
