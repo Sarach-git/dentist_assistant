@@ -1,7 +1,0 @@
-README.md
-setup.py
-dentistryChatbot.egg-info/PKG-INFO
-dentistryChatbot.egg-info/SOURCES.txt
-dentistryChatbot.egg-info/dependency_links.txt
-dentistryChatbot.egg-info/requires.txt
-dentistryChatbot.egg-info/top_level.txt
