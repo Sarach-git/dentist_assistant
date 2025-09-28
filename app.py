@@ -14,7 +14,9 @@ from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone
 from langchain.prompts import PromptTemplate
 from langchain_community.llms import CTransformers
+from langchain.chat_models import init_chat_model
 from langchain.chains import RetrievalQA
+
 from src.prompt import *
 
 # ---------------- Logging ----------------
@@ -28,6 +30,7 @@ load_dotenv()
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 BASE_URL = f"https://api.telegram.org/bot{TOKEN}"
 pinecone_api_key = os.getenv("PINECONE_API_KEY")
+google_api_key = os.getenv("GOOGLE_API_KEY")
 
 # ---------------- Pinecone + LangChain setup ----------------
 index_name = "medical-chatbot"
@@ -42,12 +45,16 @@ PROMPT = PromptTemplate(
     template=prompt_template, input_variables=["context", "question"]
 )
 chain_type_kwargs = {"prompt": PROMPT}
-
+# llm model : llama model
+"""
 llm = CTransformers(
     model="model/llama-2-7b-chat.ggmlv3.q4_0.bin",
     model_type="llama",
     config={"max_new_tokens": 512, "temperature": 0.8},
 )
+"""
+# use other models like gemini
+llm = init_chat_model("gemini-2.5-flash", model_provider="google_genai")
 
 qa = RetrievalQA.from_chain_type(
     llm=llm,
