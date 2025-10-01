@@ -2,9 +2,8 @@ fastapi
 httpx
 python-telegram-bot==13.15
 python-dotenv
-google-generativeai
-#langchain
-#langchain-community
-#langchain-pinecone
-#pinecone-client
-#pydantic
+langchain
+langchain-community
+langchain-pinecone
+pinecone-client
+pydantic
