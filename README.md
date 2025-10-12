@@ -1,12 +1,12 @@
 # Multi Document RAG Customer Support Telegram Chatbot : OpenAI, Langchain, Pinecone
 
-A Customer Support chatbot for dentistry built using FastAPI, Llama2, Langchain, and Pinecone. The chatbot utilizes generative AI for providing medical-related assistance and responses. It's designed to offer interactive and intelligent support for users seeking Dental-related information.
+A Customer Support chatbot for dentistry built using FastAPI, OpenAI, Langchain, and Pinecone.The chatbot is powered by generative AI, enabling it to provide assistance and responses on medical topics and clinical info(prices, schedule and policy). It's designed to offer interactive and intelligent support for users seeking Dental-related information.
 
 ## Technology Stack Overview
 
 - **FastAPI(Web Framework)**: FastAPI is a modern and high-performance Python web framework used to build APIs quickly and efficiently.
-- **Telegram*(Frontend)**: Telegram serves as a frontend, a user interface, for chatbots, allowing users to interact with automated programs through a familiar messaging interface
-- **Llama2(LLM)**: Provides AI-powered responses based on user input.
+- **Telegram(Frontend)**: Telegram serves as a frontend, a user interface, for chatbots, allowing users to interact with automated programs through a familiar messaging interface
+- **OpenAI(LLM)**: Provides AI-powered responses based on user input.
 - **Langchain(LLM framework)**: Facilitates the integration of language models for better response generation.
 - **Pinecone(Vector Store)**: Manages and stores vectors to enable semantic search for medical information.
 - **Medical resource(Knowledge base)**:[The GALE ENCYCLOPEDIA of MEDICINE](https://www.academia.edu/32752835/The_GALE_ENCYCLOPEDIA_of_MEDICINE_SECOND_EDITION) plus to the clinic's private info .
@@ -26,7 +26,7 @@ A Customer Support chatbot for dentistry built using FastAPI, Llama2, Langchain,
 
 Prerequisites before cloning the repo :
 - create telegram bot (discussed below)
-- create a vector index in Pinecone, upload your own document
+- create a vector index in Pinecone, upload your own document(use store_index.py)
 
 
 ### ✅ 1. Create a Telegram Bot
