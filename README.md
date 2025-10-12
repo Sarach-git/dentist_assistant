@@ -1,6 +1,6 @@
-# RAG Dentistry Customer Support Telegram Chatbot : Llama2, Langchain, Pinecone
+# Multi Document RAG Customer Support Telegram Chatbot : OpenAI, Langchain, Pinecone
 
-A Customer Support chatbot built using FastAPI, Llama2, Langchain, and Pinecone. The chatbot utilizes generative AI for providing medical-related assistance and responses. It's designed to offer interactive and intelligent support for users seeking Dental-related information.
+A Customer Support chatbot for dentistry built using FastAPI, Llama2, Langchain, and Pinecone. The chatbot utilizes generative AI for providing medical-related assistance and responses. It's designed to offer interactive and intelligent support for users seeking Dental-related information.
 
 ## Technology Stack Overview
 
@@ -9,7 +9,7 @@ A Customer Support chatbot built using FastAPI, Llama2, Langchain, and Pinecone.
 - **Llama2(LLM)**: Provides AI-powered responses based on user input.
 - **Langchain(LLM framework)**: Facilitates the integration of language models for better response generation.
 - **Pinecone(Vector Store)**: Manages and stores vectors to enable semantic search for medical information.
-- **Medical resource(Knowledge base)**:[The GALE ENCYCLOPEDIA of MEDICINE](https://www.academia.edu/32752835/The_GALE_ENCYCLOPEDIA_of_MEDICINE_SECOND_EDITION)
+- **Medical resource(Knowledge base)**:[The GALE ENCYCLOPEDIA of MEDICINE](https://www.academia.edu/32752835/The_GALE_ENCYCLOPEDIA_of_MEDICINE_SECOND_EDITION) plus to the clinic's private info .
 - **Deployment** : Deploy locally, once everything works locally, you can deploy to a server (e.g., Railway, Render, Vercel)
 
 ## 🚀 Setup Guide
@@ -20,7 +20,7 @@ A Customer Support chatbot built using FastAPI, Llama2, Langchain, and Pinecone.
 - Python 3.8+
 - FastAPI
 - python-telegram-bot
-- Llama2 model
+- OpenAI LLM model
 - Langchain
 - Pinecone  
 
@@ -87,10 +87,16 @@ pip install -r requirements.txt
 ---
 
 ### ✅ 5. Run the Chatbot Locally
+* multi doc rag :
+```bash
+python multi.py
+```
 
+* single doc rag :
 ```bash
 python app.py
 ```
+
 ---
 
 ### ✅ 6. Test the Bot

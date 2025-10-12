@@ -7,3 +7,4 @@ langchain-community
 langchain-pinecone
 pinecone-client
 pydantic
+openai
