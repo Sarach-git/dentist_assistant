@@ -4,7 +4,9 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
-from telegram import Update, Bot
+from telegram import Update
+from telegram import Bot
+from telegram.request import HTTPXRequest  # NEW: async-friendly HTTP backend
 
 from langchain.agents.agent_types import AgentType
 from langchain.chains import RetrievalQA
@@ -18,25 +20,25 @@ from langchain.prompts import PromptTemplate
 from src.prompt import prompt_template
 from pinecone import Pinecone
 
-# ---------------- Logging ----------------
+# Logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# ---------------- Environment ----------------
+# Environment
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
-bot = Bot(token=TELEGRAM_TOKEN)
+# Create async Telegram Bot with HTTPX backend
+bot = Bot(token=TELEGRAM_TOKEN, request=HTTPXRequest())
 
-# ---------------- Vector & LLM Setup ----------------
+# LangChain setup
 PROMPT = PromptTemplate(
     template=prompt_template, input_variables=["context", "question"]
 )
 llm = OpenAI(openai_api_key=OPENAI_API_KEY)
 chain_type_kwargs = {"prompt": PROMPT}
-
 pc = Pinecone(api_key=PINECONE_API_KEY)
 
 
@@ -80,7 +82,7 @@ agent_chain = initialize_agent(
     handle_parsing_errors=True,
 )
 
-# ---------------- FastAPI App ----------------
+# FastAPI app
 app = FastAPI()
 
 
@@ -99,7 +101,7 @@ async def telegram_webhook(request: Request):
 
         if message and chat_id:
             response = agent_chain.run({"input": message})
-            bot.send_message(chat_id=chat_id, text=response)
+            await bot.send_message(chat_id=chat_id, text=response)
     except Exception as e:
         logger.error(f"Error processing update: {e}")
         return JSONResponse(status_code=500, content={"error": str(e)})
