@@ -1,10 +1,9 @@
 # Multi Document RAG Customer Support Telegram Chatbot : OpenAI, Langchain, Pinecone
 
-A Customer Support chatbot for dentistry built using FastAPI, OpenAI, Langchain, and Pinecone.The chatbot is powered by generative AI, enabling it to provide assistance and responses on medical topics and clinical info(prices, schedule and policy). It's designed to offer interactive and intelligent support for users seeking Dental-related information.
+A Customer Support chatbot for dentistry built using OpenAI, Langchain, and Pinecone.The chatbot is powered by generative AI, enabling it to provide assistance and responses on medical topics and clinical info(prices, schedule and policy). It's designed to offer interactive and intelligent support for users seeking Dental-related information.
 
 ## Technology Stack Overview
 
-- **FastAPI(Web Framework)**: FastAPI is a modern and high-performance Python web framework used to build APIs quickly and efficiently.
 - **Telegram(Frontend)**: Telegram serves as a frontend, a user interface, for chatbots, allowing users to interact with automated programs through a familiar messaging interface
 - **OpenAI(LLM)**: Provides AI-powered responses based on user input.
 - **Langchain(LLM framework)**: Facilitates the integration of language models for better response generation.
