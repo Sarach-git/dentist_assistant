@@ -3,16 +3,16 @@
 A Customer Support chatbot for dentistry built using OpenAI, Langchain, and Pinecone.The chatbot is powered by generative AI, enabling it to provide assistance and responses on medical topics and clinical info(prices, schedule and policy). It's designed to offer interactive and intelligent support for users seeking Dental-related information.
 
 ## Technology Stack Overview
-
+- **FastAPI(Web framework)**: Web framework for building APIs with Python based on standard Python type hints. In order to deploy on Vercel(or any other hosting platforms) you should move the bot logic to an HTTP handler (e.g., using FastAPI or Flask)
 - **Telegram(Frontend)**: Telegram serves as a frontend, a user interface, for chatbots, allowing users to interact with automated programs through a familiar messaging interface
 - **OpenAI(LLM)**: Provides AI-powered responses based on user input.
 - **Langchain(LLM framework)**: Facilitates the integration of language models for better response generation.
 - **Pinecone(Vector Store)**: Manages and stores vectors to enable semantic search for medical information.
 - **Medical resource(Knowledge base)**:[The GALE ENCYCLOPEDIA of MEDICINE](https://www.academia.edu/32752835/The_GALE_ENCYCLOPEDIA_of_MEDICINE_SECOND_EDITION) plus to the clinic's private info .
-- **Deployment** : Deploy locally, once everything works locally, you can deploy to a server (e.g., Railway, Render, Vercel)
+- **Deployment** : Deploy locally, once everything works locally, you can deploy to a server (e.g., Railway, Render, Vercel). Follow the instruction in VERCEL.md for deploying to the Vercel platform.
+
 
 ## 🚀 Setup Guide
-
 
 ### Prerequisites
 
@@ -105,6 +105,8 @@ python app.py
 3. Send a test message — your chatbot should respond!
 
 ---
+### ✅ 7. Run the Chatbot on hosting Platform; Vercel
+Follow the instruction in VERCEL.md for deploying to the Vercel platform.
 
 
 ## Contributing
