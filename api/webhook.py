@@ -8,7 +8,8 @@ from telegram import Update
 from telegram import Bot
 from telegram.request import HTTPXRequest  # NEW: async-friendly HTTP backend
 
-from langchain.agents.agent_types import AgentType
+
+from langchain.agents import AgentType
 from langchain.chains import RetrievalQA
 from langchain.agents import initialize_agent
 from langchain.memory import ConversationBufferMemory

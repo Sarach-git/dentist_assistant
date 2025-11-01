@@ -1,14 +1,16 @@
 fastapi
+uvicorn
 httpx
-python-telegram-bot==21.6
 python-dotenv
-langchain
+python-telegram-bot==21.6
+
+# Core LangChain ecosystem
+langchain==0.2.11
 langchain-community
 langchain-huggingface
 langchain-pinecone
+
+# Vector DBs + LLMs
 pinecone-client
-pydantic
 openai
 tqdm
-uvicorn
-
