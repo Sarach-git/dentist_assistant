@@ -9,7 +9,7 @@ A Customer Support chatbot for dentistry built using OpenAI, Langchain, and Pine
 - **Langchain(LLM framework)**: Facilitates the integration of language models for better response generation.
 - **Pinecone(Vector Store)**: Manages and stores vectors to enable semantic search for medical information.
 - **Medical resource(Knowledge base)**:[The GALE ENCYCLOPEDIA of MEDICINE](https://www.academia.edu/32752835/The_GALE_ENCYCLOPEDIA_of_MEDICINE_SECOND_EDITION) plus to the clinic's private info .
-- **Deployment** : Deploy locally, once everything works locally, you can deploy to a server (e.g., Railway, Render, Vercel). Follow the instruction in VERCEL.md for deploying to the Vercel platform.
+- **Deployment** : Deploy locally, once everything works locally, you can deploy to a server (e.g., Railway, Render, Vercel). Follow the instruction in `VERCEL.md` for deploying to the Vercel platform.
 
 
 ## 🚀 Setup Guide
@@ -106,8 +106,9 @@ python app.py
 
 ---
 ### ✅ 7. Run the Chatbot on hosting Platform; Vercel
-Follow the instruction in VERCEL.md for deploying to the Vercel platform.
+Follow the instruction in `VERCEL.md` for deploying to the Vercel platform.
 
+---
 
 ## Contributing
 
